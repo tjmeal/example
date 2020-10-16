@@ -29,7 +29,7 @@ test {
 
 version = scmVersion.version
 String dockerHubUsernameProperty = findProperty('dockerHubUsername') ?: 'tjmeal'
-String imageName = "${dockerHubUsernameProperty}/spring-boot-api-example:$version"
+String imageName = "${dockerHubUsernameProperty}/$project.name:$version"
 
 docker {
     name imageName
